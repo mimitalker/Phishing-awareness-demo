@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-card {
+      background-color: white;
+      padding: 40px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0095f6;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #0077cc; }
+    a { text-decoration: none; color: #0095f6; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Demo Login</h2>
+    <form id="demoForm">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <p><a href="#">Forgot password?</a></p>
+    <p><a href="#">Create new account</a></p>
+  </div>
+
+  <script>
+    document.getElementById('demoForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('✅ Training demo only. No real credentials collected.');
+    });
+  </script>
+</body>
+</html>
